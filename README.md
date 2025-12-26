@@ -1,7 +1,7 @@
 
-## 🛡️ Password Leak Checker Bot (n8n Automation)
+  Password Leak Checker Bot (n8n Automation)
 
-### 🔍 Overview
+ Overview
 
 The **Password Leak Checker Bot** is an automated workflow built using **n8n** to detect whether an email or password has been compromised in known data breaches. When a form submission occurs, the bot checks multiple APIs for leaked credentials and automatically sends an alert email to the user.
 
@@ -9,7 +9,7 @@ This no-code/low-code version replaces manual scripting with a fully automated, 
 
 ---
 
-### ⚙️ Tools & Technologies
+  Tools & Technologies
 
 | Component               | Purpose                                           |
 | ----------------------- | ------------------------------------------------- |
@@ -23,15 +23,15 @@ This no-code/low-code version replaces manual scripting with a fully automated, 
 
 ---
 
-### 🧩 Workflow Design
+  Workflow Design
 
 Below is the logical flow of the automation:
 
-1. **📝 On Form Submission**
+1. ** On Form Submission**
 
    * Captures the user's email or password input.
 
-2. **🌐 HTTP Request**
+2. ** HTTP Request**
 
    * Sends a GET request to `HaveIBeenPwned` or `BreachDirectory` APIs to check for leaks.
    * Example endpoint:
@@ -40,19 +40,19 @@ Below is the logical flow of the automation:
      GET https://email-breach-search.api/{email_or_hash}
      ```
 
-3. **🤖 AI Agent**
+3. ** AI Agent**
 
    * Parses and interprets the API response.
    * Generates a human-readable breach summary (e.g., sites affected, type of leak, etc.).
    * Uses contextual understanding to decide if an alert should be sent.
 
-4. **📧 Gmail**
+4. ** Gmail**
 
    * Sends an automated alert email to the user summarizing the breach findings.
 
 ---
 
-### 🧠 Example Workflow (Screenshot)
+ Example Workflow (Screenshot)
 
 
 
@@ -65,7 +65,7 @@ Below is the logical flow of the automation:
 
 ---
 
-### 🧰 Setup Instructions
+  Setup Instructions
 
 1. **Create n8n Cloud Account**
 
@@ -99,7 +99,7 @@ Below is the logical flow of the automation:
 
 ---
 
-### 📬 Example Email Alert
+  Example Email Alert
 
 **Subject:** ⚠️ Breach Alert: Your Email May Have Been Compromised
 
@@ -122,17 +122,17 @@ Please update your passwords immediately and enable 2FA.
 
 ---
 
-### ✅ Key Features
+  Key Features
 
-* 🔒 No sensitive data stored or logged.
-* 🤖 Fully automated from input to email notification.
-* 📡 Integrates multiple APIs for higher accuracy.
-* 🧠 Uses AI Agent node for natural-language summaries.
-* 📬 Real-time email alerts via Gmail.
+* No sensitive data stored or logged.
+   Fully automated from input to email notification.
+*  Integrates multiple APIs for higher accuracy.
+*  Uses AI Agent node for natural-language summaries.
+*  Real-time email alerts via Gmail.
 
 ---
 
-### 🚀 Future Enhancements
+  Future Enhancements
 
 * Add database logging for analytics (MongoDB or Google Sheets node).
 * Enable Telegram or Slack notifications.
