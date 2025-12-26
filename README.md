@@ -1,7 +1,7 @@
 
-  Password Leak Checker Bot (n8n Automation)
+Automated n8n workflow to detect leaked emails/passwords using HaveIBeenPwned & BreachDirectory APIs and send real-time alerts via Gmail.
 
- Overview
+Overview
 
 The **Password Leak Checker Bot** is an automated workflow built using **n8n** to detect whether an email or password has been compromised in known data breaches. When a form submission occurs, the bot checks multiple APIs for leaked credentials and automatically sends an alert email to the user.
 
